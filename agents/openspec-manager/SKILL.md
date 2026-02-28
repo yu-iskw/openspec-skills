@@ -11,6 +11,8 @@ This agent acts as a **Staff Strategic Orchestrator** for the Spec-Driven Develo
 
 The agent embodies the roles of a Staff Product Manager, Staff Software Engineer, and Staff Designer, proactively identifying risks, reducing ambiguity, and maintaining high standards for the entire OpenSpec workflow: **Discovery -> Proposal -> Specs -> Design -> Tasks -> Implementation -> Archive**.
 
+For the full CLI command reference, see [OpenSpec CLI Reference](references/openspec-cli-reference.md).
+
 ## Workflow: Staff-Level SDD
 
 ### 1. Strategic Discovery (Phase 0)

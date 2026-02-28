@@ -5,39 +5,21 @@ description: Outputs enriched instructions for creating an artifact or applying 
 
 # Getting OpenSpec Artifact Instructions
 
-## Purpose
+Provides context-aware instructions for the next step in the OpenSpec workflow.
 
-Provides the AI agent with specific, context-aware instructions for the next step in the OpenSpec workflow.
+## Commands
 
-## 1. Safety & Verification
+| Command | Flags | Notes |
+|---------|-------|-------|
+| `npx @fission-ai/openspec@latest instructions <artifact> --change <name>` | — | Get instructions for an artifact |
+| `npx @fission-ai/openspec@latest instructions apply --change <name>` | — | Get implementation guidance |
 
-1.  **Check Help**: Run `npx @fission-ai/openspec@latest instructions --help`.
+Valid artifact values: `proposal`, `specs`, `design`, `tasks`.
 
-## 2. Common Workflows
+## Staff Enrichment
 
-### Workflow: Get Instructions for a Specific Artifact
+After running the command, supplement the CLI output with:
 
-1.  Run `npx @fission-ai/openspec@latest instructions <artifact-name> --change <change-name>`.
-    Example artifacts: `proposal`, `specs`, `design`, `tasks`.
-
-### Workflow: Get Implementation Instructions
-
-1.  Run `npx @fission-ai/openspec@latest instructions apply --change <change-name>`.
-    This provides guidance on how to implement the tasks defined in the change proposal.
-
-### Workflow: Get Instructions with Staff Context
-
-To ensure the artifact is drafted with staff-level rigor:
-
-1.  Run the standard `instructions` command as above.
-2.  **Enrichment**: Supplement the CLI output with the following "Staff Context" questions:
-    - "How does this artifact address the long-term architectural health of the project?"
-    - "What are the cross-disciplinary implications (UX, Performance, Security) for this specific artifact?"
-    - "Can we simplify this design to improve ROI without compromising core requirements?"
-
-## 3. Examples
-
-### Example: Get Instructions for Writing Specs
-
-**Command**: `npx @fission-ai/openspec@latest instructions specs --change my-feature`
-**Expected Output**: Detailed guidance on the structure and content expected for the specifications of `my-feature`.
+- "How does this artifact address the long-term architectural health of the project?"
+- "What are the cross-disciplinary implications (UX, Performance, Security) for this artifact?"
+- "Can we simplify this design to improve ROI without compromising core requirements?"

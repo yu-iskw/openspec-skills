@@ -5,33 +5,13 @@ description: Lists OpenSpec items such as active change proposals and specificat
 
 # Listing OpenSpec Items
 
-## Purpose
+Displays active changes or specifications in the project. Default sort is by recent activity.
 
-Provides visibility into the current state of OpenSpec artifacts (changes and specs) within the project.
+## Commands
 
-## 1. Safety & Verification
-
-1.  **Check Help**: Run `npx @fission-ai/openspec@latest list --help`.
-
-## 2. Common Workflows
-
-### Workflow: List Active Changes
-
-1.  Run `npx @fission-ai/openspec@latest list` (defaults to changes).
-2.  By default, items are sorted by recent activity.
-
-### Workflow: List All Specifications
-
-1.  Run `npx @fission-ai/openspec@latest list --specs`.
-
-### Workflow: Programmatic Listing
-
-1.  Use `--json` for structured output:
-    `npx @fission-ai/openspec@latest list --json`
-
-## 3. Examples
-
-### Example: List Specs Sorted by Name
-
-**Command**: `npx @fission-ai/openspec@latest list --specs --sort name`
-**Expected Output**: A list of all specifications in alphabetical order.
+| Command | Flags | Notes |
+|---------|-------|-------|
+| `npx @fission-ai/openspec@latest list` | — | List active changes |
+| `npx @fission-ai/openspec@latest list` | `--specs` | List specifications instead |
+| `npx @fission-ai/openspec@latest list` | `--json` | Output as JSON |
+| `npx @fission-ai/openspec@latest list` | `--sort name` | Sort alphabetically |

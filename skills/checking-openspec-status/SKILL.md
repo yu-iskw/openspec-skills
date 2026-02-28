@@ -5,29 +5,12 @@ description: Displays the completion status of artifacts for an OpenSpec change.
 
 # Checking OpenSpec Status
 
-## Purpose
+Shows which artifacts (`proposal.md`, `specs/`, `design.md`, `tasks.md`) are complete or
+pending for a given change.
 
-Provides a summary of which artifacts have been completed and which are still pending for a specific change proposal.
+## Commands
 
-## 1. Safety & Verification
-
-1.  **Check Help**: Run `npx @fission-ai/openspec@latest status --help`.
-
-## 2. Common Workflows
-
-### Workflow: Check Change Progress
-
-1.  Run `npx @fission-ai/openspec@latest status --change <change-name>`.
-2.  Review the artifact completion list.
-
-### Workflow: Get Status as JSON
-
-1.  Use `--json` for programmatic status checks:
-    `npx @fission-ai/openspec@latest status --change <change-name> --json`
-
-## 3. Examples
-
-### Example: Check Status of Current Feature
-
-**Command**: `npx @fission-ai/openspec@latest status --change my-feature`
-**Expected Output**: A checklist showing the status of `proposal.md`, `specs/`, `design.md`, and `tasks.md`.
+| Command | Flags | Notes |
+|---------|-------|-------|
+| `npx @fission-ai/openspec@latest status --change <name>` | — | Show artifact completion status |
+| `npx @fission-ai/openspec@latest status --change <name>` | `--json` | Output as JSON |
